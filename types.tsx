@@ -6,6 +6,7 @@
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Float } from 'react-native/Libraries/Types/CodegenTypes';
 
 declare global {
   namespace ReactNavigation {
@@ -33,3 +34,22 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export type Movie = {
+  adult:boolean;
+  backdrop_path:string;
+  genre_ids: number[];
+  id: number;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  popularity: Float;
+  name: string;
+  first_air_date: string;
+  poster_path:string;
+  release_date:string;
+  title:string;
+  video:boolean;
+  vote_average: Float;
+  vote_count:number
+}
