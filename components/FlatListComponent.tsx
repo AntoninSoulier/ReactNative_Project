@@ -33,7 +33,7 @@ export default function FlatListComponent(props: any) {
         :
         <FlatList
           data={moviesList}
-          renderItem={(item: any) => MovieComponent()}
+          renderItem={(object: any) => MovieComponent(object, props.navigation)}
           keyExtractor={(item: Movie) => item.id.toString()}
           numColumns={3}
           onEndReached={()=>{getData(); setPageNumber(pageNumber+1)}}
