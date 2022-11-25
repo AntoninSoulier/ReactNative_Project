@@ -27,7 +27,7 @@ export default function FlatListComponent(props: any) {
 
   return (
     <View style={styles.container}>
-      {moviesList.length == 0 ?
+      {moviesList == undefined || moviesList.length == 0 ?
         <ActivityIndicator>
         </ActivityIndicator>
         :
