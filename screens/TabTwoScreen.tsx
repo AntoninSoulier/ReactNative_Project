@@ -2,13 +2,14 @@ import { StyleSheet } from 'react-native';
 import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import FlatListComponent from '../components/FlatListComponent';
+import navigation from '../navigation';
+import { RootTabScreenProps } from '../types';
 
-export default function TabTwoScreen() {
+export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabTwo'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <FlatListComponent navigation={navigation} type={"tv"}/>
     </View>
   );
 }

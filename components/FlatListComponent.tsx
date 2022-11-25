@@ -37,6 +37,8 @@ export default function FlatListComponent(props: any) {
           keyExtractor={(item: Movie) => item.id.toString()}
           numColumns={3}
           onEndReached={()=>{getData(); setPageNumber(pageNumber+1)}}
+          initialNumToRender = {10}
+          maxToRenderPerBatch={10}
         >
         </FlatList>
       }
