@@ -6,7 +6,7 @@ import { Movie } from '../types';
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
-export default function MovieComponent() {
+export default function MovieComponent(object: any, navigation:any) {
   let movie = object.item as Movie;
   
   return (
